@@ -62,7 +62,7 @@ class ImportsController < ApplicationController
   end
 
   def reconcile
-    max = 200
+    max = 10_000
 
     @sagepay_transactions = (1..max).map do |num|
       rfq_ref = "P#{(rand * 1_000_000).round}"
