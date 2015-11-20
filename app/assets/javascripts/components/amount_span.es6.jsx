@@ -4,9 +4,11 @@ class AmountSpan extends React.Component {
   }
 
   render () {
+    var amount = this.props.amount || 0;
+
     return (
       <span className="amount">
-        £ {this.props.amount.toFixed(2)}
+        £ {amount.toFixed(2)}
       </span>
     );
   }
