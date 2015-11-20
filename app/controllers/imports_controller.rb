@@ -61,10 +61,10 @@ class ImportsController < ApplicationController
     end
   end
 
-  def reconcile
-    max = 200
+  MAX_ROWS = 200
 
-    @sagepay_transactions = (1..max).map do |num|
+  def reconcile
+    @sagepay_transactions = (1..MAX_ROWS).map do |num|
       rfq_ref = "P#{(rand * 1_000_000).round}"
       letter = ("B".."G").to_a.sample
 
@@ -74,14 +74,14 @@ class ImportsController < ApplicationController
         type:              "Payment",
         contact_name:      "Mr Test Tester",
         rfq_reference:     rfq_ref,
-        date:              Date.new,
+        date:              Date.current.strftime("%d/%m/%Y"),
         payment_reference: "A#{letter}_#{rfq_ref}_REN_20150101012345_4444_C",
         status:            ["Unmatched", "Partial", "Query"].sample,
         total:             rand * 100,
       }
     end
 
-    @chopin_transactions = (1..max).map do |num|
+    @chopin_transactions = (1..MAX_ROWS).map do |num|
       rfq_ref = "P#{(rand * 1_000_000).round}"
       letter = ("B".."G").to_a.sample
 
@@ -91,7 +91,7 @@ class ImportsController < ApplicationController
         type:              "Payment",
         contact_name:      "Mr Test Tester",
         rfq_reference:     rfq_ref,
-        date:              Date.new,
+        date:              Date.current.strftime("%d/%m/%Y"),
         payment_reference: "A#{letter}_#{rfq_ref}_REN_20150101012345_4444_C",
         status:            ["Unmatched", "Partial", "Query"].sample,
         total:             rand * -100,

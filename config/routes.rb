@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   root to: "imports#index"
 
   resources :imports do
-    member do
+    collection do
       get :reconcile
     end
   end
