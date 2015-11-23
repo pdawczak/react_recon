@@ -1,6 +1,8 @@
 React Reconcilation
 ===================
 
+![Alt Embrace your frontend](embrace_your_frontend.jpg?raw=true)
+
 Installation
 ------------
 
