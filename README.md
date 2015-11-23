@@ -54,10 +54,11 @@ Check `app/views/imports/reconcile.html.erb` where we're using our
 In `app/assets/javascripts/components/` you can find all components created for
 building _Reconciliation Screen_.
 
-In `app/assets/javascripts/components/transaction_row.es6.jsx` (line 2) there
-is example of implementation of `shouldComponentUpdate` preventing component
-from re-rendering if not required (this method has been uncommented during
-presentation resulting with much more performant interface).
+In `app/assets/javascripts/components/transaction_row.es6.jsx` (line 2) there is
+example of implementation of
+[`shouldComponentUpdate`](https://facebook.github.io/react/docs/advanced-performance.html)
+preventing component from re-rendering if not required (this method has been
+uncommented during presentation resulting with much more performant interface).
 
 How about testing?
 ------------------
