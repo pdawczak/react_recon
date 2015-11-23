@@ -52,7 +52,7 @@ Check `app/views/imports/reconcile.html.erb` where we're using our
 ```
 
 In `app/assets/javascripts/components/` you can find all components created for
-building _Reconcilation Screen_.
+building _Reconciliation Screen_.
 
 In `app/assets/javascripts/components/transaction_row.es6.jsx` (line 2) there
 is example of implementation of `shouldComponentUpdate` preventing component
