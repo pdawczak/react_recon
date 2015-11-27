@@ -115,8 +115,7 @@ class ReconciliationScreen extends React.Component {
 
     var matchToken = GUID.generate();
 
-    Object.keys(this.state.selected)
-      .forEach(key => this.state.selected[key].setMatchToken(matchToken));
+    selectedKeys.forEach(key => this.state.selected[key].setMatchToken(matchToken));
 
     this.state.selected = {};
 
